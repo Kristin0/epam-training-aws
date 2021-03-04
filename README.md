@@ -1,6 +1,13 @@
 # What to do
 
-First of all you need to copy your local ssh public key to your "remote" vagrant host. In my case
+What you do first
+```mkdir ansible && cd ansible
+   git clone git@github.com:Kristin0/epam-training-ansible.git
+   vagrant up 
 ```
-ssh-copy-id -i /home/<your_username>/.ssh/id_rsa.pub vagrant@192.168.111.111 
+
+Then you need to copy your local ssh public key to your "remote" vagrant host. In my case
 ```
+    ssh-copy-id -i /home/<your_username>/.ssh/id_rsa.pub vagrant@192.168.111.111 
+```
+   
