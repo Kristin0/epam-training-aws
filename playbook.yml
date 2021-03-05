@@ -1,5 +1,5 @@
 ---
-- name: Install Wordpress, nginx, mySql
+- name: Simple WordPress installation using mysql and nginx
   hosts: all
   become: yes
 
