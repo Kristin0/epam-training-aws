@@ -1,0 +1,103 @@
+---
+- name: Install Wordpress, nginx, mySql
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: Install Nginx Webserver
+    apt:  name=nginx state=latest update_cache=yes
+  
+  - name: Start Nginx and Enable
+    service: name=nginx state=started enabled=yes
+
+  - name: Install php
+    apt: name=php state=latest 
+  
+  - name: Install mysql-client/server, start, enable
+    apt:
+      name:
+       - mysql-client
+       - mysql-server
+  - name: Start MySql and Enable
+    service: name=mysql state=started enabled=yes
+
+  - name: Install php-mysql
+    apt: name=php-mysql state=latest
+
+  - name: Install pip3
+    apt: name=python3-pip
+
+  - name: Make sure pymysql is present
+    pip:
+      name: pymysql
+      state: present
+
+        # - name: Update mysql root password 
+        #community.mysql.mysql_user:
+        #name: root
+        #password: vagrant
+        #login_user: root
+        #login_password: vagrant
+        #priv: "*.*: ALL, GRANT"
+
+  - name: Create a new database with name 'wordpress_db'
+    community.mysql.mysql_db:
+      login_user: root
+      login_password: ""
+      name: wordpress_db
+      state: present
+      login_unix_socket: /var/run/mysqld/mysqld.sock
+    become: yes
+
+  - name: Create user 'wordpress_user' with password 'my_pass' with grant privileged on 'wordpress_db'
+    community.mysql.mysql_user:
+      state: present
+      name: wordpress_user
+      password: my_pass
+      priv:
+        'wordpress_db.*': 'ALL,GRANT'
+      login_unix_socket: /var/run/mysqld/mysqld.sock
+    become: yes
+
+  - name: Copy default to wordpress
+    copy: src=/etc/nginx/sites-available/default dest=/etc/nginx/sites-available/wordpress remote_src=yes 
+    notify: Reload nginx config
+
+  - name: Create symlink for wordpress
+    ansible.builtin.file:
+      src: /etc/nginx/sites-available/wordpress
+      dest: /etc/nginx/sites-enabled/wordpress
+      state: link
+  - name: Remove default config
+    ansible.builtin.file:
+      path: /etc/nginx/sites-enabled/default
+      state: absent
+
+  - name: Change root in wordpress config to our site directory
+    ansible.builtin.lineinfile:
+      path: /etc/nginx/sites-available/wordpress
+      regexp: ' *root *'
+      line: root /var/www/wordpress;
+      firstmatch: yes
+    notify: Reload nginx config
+
+  - name: Download and unarchive latest WordPress
+    unarchive:
+      src: https://wordpress.org/latest.tar.gz
+      dest: "/var/www"
+      remote_src: yes
+      creates: "/var/www/wordpress" 
+      mode: '775'
+
+  - name: Set owner www-data
+    file:
+        path: "/var/www"
+        state: directory
+        recurse: yes
+        owner: www-data
+        group: www-data
+
+
+  handlers:
+    - name: Reload nginx config
+      service: name=nginx state=restarted

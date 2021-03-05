@@ -15,5 +15,5 @@ ssh-copy-id -i /home/<your_username>/.ssh/id_rsa.pub vagrant@192.168.111.111
    
 Check if you have a connection to your host
 ```
-ansible -i inventory.yml all -m ping
+ansible  all -m ping
 ```
