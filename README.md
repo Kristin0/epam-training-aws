@@ -1,4 +1,4 @@
-# tested on Debian(host), Ubuntu20.04(remote)
+# Simple use of WP with ansible --tested on Debian(host), Ubuntu20.04(remote)
 
 Do first
 ```
