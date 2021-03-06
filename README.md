@@ -1,4 +1,4 @@
-# What to do --- tested on Debian(host), Ubuntu(remote)
+# What to do --- tested on Debian(host), Ubuntu20.04(remote)
 
 Do first
 ```
