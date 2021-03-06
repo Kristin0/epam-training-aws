@@ -49,11 +49,7 @@
 
   - name: Install php-mysql
     apt: name=php-mysql state=latest
-
-  
-
- 
-
+    
         # - name: Update mysql root password 
         #community.mysql.mysql_user:
         #name: root
