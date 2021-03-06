@@ -2,7 +2,8 @@
 - name: Simple WordPress installation using mysql and nginx
   hosts: all
   become: yes
-
+  gather_facts: no
+  
   tasks:
   - name: Install Nginx Webserver
     apt:  name=nginx state=latest update_cache=yes
@@ -16,21 +17,42 @@
   - name: Install mysql-client/server, start, enable
     apt:
       name:
+       - libmysqlclient-dev
        - mysql-client
        - mysql-server
+      update_cache: yes
+
   - name: Start MySql and Enable
     service: name=mysql state=started enabled=yes
-
-  - name: Install php-mysql
-    apt: name=php-mysql state=latest
-
+    
   - name: Install pip3
     apt: name=python3-pip
-
+    
   - name: Make sure pymysql is present
     pip:
       name: pymysql
       state: present
+      
+ 
+  
+  - name: Remove test database
+    community.mysql.mysql_db: 
+      name: test 
+      state: absent
+      login_unix_socket: /var/run/mysqld/mysqld.sock
+
+  - name: Remove anonymous users 
+    community.mysql.mysql_user: 
+      user: ''
+      state: absent
+      login_unix_socket: /var/run/mysqld/mysqld.sock
+
+  - name: Install php-mysql
+    apt: name=php-mysql state=latest
+
+  
+
+ 
 
         # - name: Update mysql root password 
         #community.mysql.mysql_user:
@@ -68,6 +90,7 @@
       src: /etc/nginx/sites-available/wordpress
       dest: /etc/nginx/sites-enabled/wordpress
       state: link
+      
   - name: Remove default config
     ansible.builtin.file:
       path: /etc/nginx/sites-enabled/default
