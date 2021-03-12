@@ -1,0 +1,80 @@
+---
+# tasks file for mysql
+
+  - name: Install mysql-client/server, start, enable
+    apt:
+      name:
+       - mysql-server
+      update_cache: true
+    become: true
+
+  - name: Start MySql and Enable
+    service: 
+      name: mysql 
+      state: started 
+      enabled: true
+    become: true
+
+  - name: Install pip3
+    apt: 
+      name: python3-pip
+    become: true
+    
+  - name: Make sure pymysql is present
+    pip:
+      name: pymysql
+      state: present
+    become: true
+ 
+  - name: Move root credentials to remote
+    template:
+      src: '../files/.my.cnf.j2'
+      dest: '/root/.my.cnf'
+      mode: '0755'
+    become: true
+
+
+  - name: Update mysql root password
+    mysql_user:
+        login_user: '{{ root_login }}'
+        login_password: '{{ root_password }}'
+        user: '{{ root_login }}'
+        password: '{{ root_password }}'
+        login_unix_socket: /var/run/mysqld/mysqld.sock
+    become: true
+
+
+  - name: Remove test database
+    community.mysql.mysql_db: 
+      name: test 
+      state: absent
+      login_user: '{{ root_login }}'
+      login_password: '{{ root_password }}'
+    become: true
+
+  - name: Remove anonymous users 
+    community.mysql.mysql_user: 
+      user: ''
+      state: absent
+      login_user: '{{ root_login }}'
+      login_password: '{{ root_password }}'
+    become: true
+  
+  - name: Create a new database 
+    community.mysql.mysql_db:
+      login_user: '{{ root_login }}' 
+      login_password: '{{ root_password }}'
+      name: '{{ mysql_database_name }}' 
+      state: present
+    become: true
+
+  - name: Create database user
+    community.mysql.mysql_user:
+      state: present
+      login_user: '{{ root_login }}' 
+      login_password: '{{ root_password }}'
+      name: '{{ mysql_user }}' 
+      password: '{{ mysql_user_password }}'
+      priv:
+        "{{ mysql_database_name }}.*:ALL,GRANT"
+    become: true
