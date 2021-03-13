@@ -22,3 +22,50 @@ Then use existing playbook with command
 ```
 ansible-playbook all playbook.yml
 ```
+```
+├── ansible.cfg
+├── group_vars
+│   └── myservers.yml
+├── inventory
+├── README.md
+├── roles
+│   ├── mysql
+│   │   ├── defaults
+│   │   │   └── main.yml
+│   │   ├── files
+│   │   ├── handlers
+│   │   │   └── main.yml
+│   │   ├── tasks
+│   │   │   └── main.yml
+│   │   ├── templates
+│   │   └── vars
+│   │       └── main.yml
+│   ├── nginx
+│   │   ├── defaults
+│   │   │   └── main.yml
+│   │   ├── files
+│   │   ├── handlers
+│   │   │   └── main.yml
+│   │   ├── tasks
+│   │   │   └── main.yml
+│   │   ├── templates
+│   │   │   └── wordpress.j2
+│   │   └── vars
+│   │       └── main.yml
+│   └── wordpress
+│       ├── defaults
+│       │   └── main.yml
+│       ├── files
+│       ├── handlers
+│       │   └── main.yml
+│       ├── tasks
+│       │   └── main.yml
+│       ├── templates
+│       │   ├── index.j2
+│       │   └── wp-config.php.j2
+│       └── vars
+│           └── main.yml
+├── Vagrantfile
+└── wordpress.yml
+```
+
