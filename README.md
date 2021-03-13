@@ -1,4 +1,4 @@
-# Wordpress installation automation with ansible  
+## WordPress automation with Ansible  
 --tested on Debian(host), Ubuntu20.04_core(remote)
 
 Do first
@@ -68,4 +68,5 @@ ansible-playbook all playbook.yml
 ├── Vagrantfile
 └── wordpress.yml
 ```
+![alt text](https://imgur.com/mPNE1lI)
 
