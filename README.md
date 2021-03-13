@@ -1,6 +1,7 @@
 ## WordPress automation with Ansible  
 
-How to use```
+How to use
+```
 sudo apt-get install python3-pip && pip3 install ansible && export PATH=$PATH:~/.local/bin # export is for one session
 git clone git@github.com:Kristin0/epam-training-ansible.git && cd epam-training-ansible/
 vagrant up 
