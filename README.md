@@ -1,8 +1,6 @@
 ## WordPress automation with Ansible  
---tested on Debian(host), Ubuntu20.04_core(remote)
 
-Do first
-```
+How to use```
 sudo apt-get install python3-pip && pip3 install ansible && export PATH=$PATH:~/.local/bin # export is for one session
 git clone git@github.com:Kristin0/epam-training-ansible.git && cd epam-training-ansible/
 vagrant up 
