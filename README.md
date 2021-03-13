@@ -1,4 +1,4 @@
-# simple use of WP with ansible 
+# Wordpress installation automation with ansible  
 --tested on Debian(host), Ubuntu20.04_core(remote)
 
 Do first
