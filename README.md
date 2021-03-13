@@ -68,7 +68,5 @@ ansible-playbook all playbook.yml
 ├── Vagrantfile
 └── wordpress.yml
 ```
-![image](https://user-images.githubusercontent.com/44585557/111031212-c4784100-841f-11eb-8e91-9837066b7318.png)
-![image](https://user-images.githubusercontent.com/44585557/111031234-cfcb6c80-841f-11eb-8856-e5fff37a52f9.png)
 
 
