@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
       domain.cpus = 2
     end
 
-    test_vm.vm.network :private_network, :ip => '192.168.122.132'
+    test_vm.vm.network :private_network, :ip => '192.168.111.111'
   end
 
 
