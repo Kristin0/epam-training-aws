@@ -1,6 +1,12 @@
 mysql_user: 'User Useryan'
-mysql_database_name:  'wp_db' 
+mysql_database_name:  'wp_db'
 mysql_user_password:  'pa$$w0rd'
-root_password : 'r00tpa$$w0rd'
-root_login: 'root'
+mysql_root_password : 'r00tpa$$w0rd'
+# root_login: 'root'
 
+# version vars
+nginx_site_path: 'wordpress'
+nginx_version: '1.18.0' #-0ubuntu1
+mysql_server_version: '8.0.23'
+php_version: '7.4' #-4ubuntu2.4
+php_fpm_version: '7.4'

@@ -1,6 +1,6 @@
 server {
 	listen {{ nginx_port_number }} default_server;
-	listen [::]:80 default_server;
+	listen [::]:{{ nginx_port_number }} default_server;
 
 		root /var/www/{{ nginx_site_path }};
 

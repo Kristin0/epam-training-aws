@@ -4,23 +4,6 @@
   gather_facts: true
   roles:
     - nginx
+    - php
     - mysql
     - wordpress
-  tasks: 
-  - name: Install php
-    apt: 
-      name: php
-      state: latest 
-      update_cache: true
-    become: true
- 
-  - name: Install php-mysql
-    apt:
-      name: php-mysql
-      state: latest
-      update_cache: true
-    become: true
-  - name: Install php7.2-fpm
-    apt: 
-      name: php7.4-fpm
-    become: true

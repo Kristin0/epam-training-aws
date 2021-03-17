@@ -2,8 +2,8 @@
 # tasks file for nginx
   - name: Install Nginx Webserver
     apt:  
-      name: nginx 
-      state: latest 
+      name: 'nginx={{ nginx_version }}-0ubuntu1'
+      state: present
       update_cache: true
     become: true
   
@@ -16,7 +16,7 @@
 
   - name: Generating server config for WordPress site
     template:
-      src: '../templates/wordpress.j2'
+      src: 'wordpress.j2'
       dest: '/etc/nginx/sites-available/wordpress'
     notify: Reload nginx config
     become: true
@@ -26,7 +26,6 @@
      src: '/etc/nginx/sites-available/wordpress'
      dest: '/etc/nginx/sites-enabled/wordpress'
      state: link
-    notify: Reload nginx config
     become: true 
 
   - name: Remove default config

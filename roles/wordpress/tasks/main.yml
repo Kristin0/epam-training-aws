@@ -6,13 +6,13 @@
       src: https://wordpress.org/latest.tar.gz
       dest: "/var/www"
       remote_src: yes
-      creates: "/var/www/wordpress" 
+      creates: "/var/www/{{ nginx_site_path }}" 
       mode: '0755'
     become: true
 
   - name: Set owner www-data
     file:
-        path: "/var/www/wordpress"
+        path: "/var/www/{{ nginx_site_path }}"
         state: directory
         recurse: yes
         owner: www-data
@@ -21,16 +21,16 @@
   
   - name: Generating index.html
     template:
-      src: '../templates/index.j2'
-      dest: '/var/www/wordpress/index.html'
+      src: 'index.j2'
+      dest: '/var/www/{{ nginx_site_path }}/index.html'
       mode: '0755'
     notify: Reload nginx config
     become: true
   
   - name: Generating wp-config.php
     template:
-      src: '../templates/wp-config.php.j2'
-      dest: '/var/www/wordpress/wp-config.php'
+      src: 'wp-config.php.j2'
+      dest: '/var/www/{{ nginx_site_path }}/wp-config.php'
       mode: '0755'
     notify: Reload nginx config
     become: true
