@@ -1,0 +1,9 @@
+---
+- name: Simple wordpress installation 
+  hosts: myservers
+  gather_facts: true
+  roles:
+    - nginx
+    - php
+    - mysql
+    - wordpress
