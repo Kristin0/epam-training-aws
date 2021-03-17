@@ -1,6 +1,0 @@
-mysql_user: 'User Useryan'
-mysql_database_name:  'wp_db' 
-mysql_user_password:  'pa$$w0rd'
-root_password : 'r00tpa$$w0rd'
-root_login: 'root'
-
