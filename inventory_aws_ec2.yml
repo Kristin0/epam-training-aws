@@ -1,0 +1,13 @@
+  
+
+  plugin: aws_ec2
+  #aws_profile: default
+  aws_access_key: AKIA5L7J5XMLISCT7LMN
+  aws_secret_key: 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
+  regions: 
+    - eu-central-1
+  filters:
+    tag:Name: 
+      - Wordpress
+    instance-state-name: running
+

@@ -4,7 +4,7 @@
     apt:  
       name: 'nginx={{ nginx_version }}-0ubuntu1'
       state: present
-      update_cache: true
+        # update_cache: true
     become: true
   
   - name: Start Nginx and Enable

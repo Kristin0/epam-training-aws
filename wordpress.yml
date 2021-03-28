@@ -1,9 +1,15 @@
 ---
+- name: Simple RDS database creation
+  hosts: localhost
+  roles:
+    - mysql
+
 - name: Simple wordpress installation 
-  hosts: myservers
+  hosts: aws_ec2
   gather_facts: true
   roles:
     - nginx
     - php
-    - mysql
     - wordpress
+
+
