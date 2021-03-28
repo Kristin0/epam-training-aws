@@ -9,4 +9,4 @@ cd /home/ubuntu/ec2
 git init
 git pull https://github.com/Kristin0/epam-training-ec2.git
 chown -R ubuntu:ubuntu /home/ubuntu/epam-training-ec2
-runuser -l ubuntu -c 'cd ~/epam-training-ec2 && ansible-playbook wordpress.yml'
+runuser -l ubuntu -c 'cd ~/epam-training-ec2/ansible && ansible-playbook wordpress.yml'
