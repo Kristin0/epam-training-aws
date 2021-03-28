@@ -5,6 +5,7 @@ mysql_root_password : 'pa$$w0rd'
 mysql_root_user: 'admin'
 mysql_login_host: 'database-for-wordpress.cxvasfiejukd.eu-central-1.rds.amazonaws.com'
 mysql_user_host: '' # your web server private ip
+
 # version vars
 nginx_site_path: 'wordpress'
 nginx_version: '1.18.0' #-0ubuntu1
