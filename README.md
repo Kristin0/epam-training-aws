@@ -1,4 +1,5 @@
-### user data
+### user data for your ami
+please change access/secret keys in inventory_aws_ec2.yml to your own
 
 ```
 #!/bin/bash -ex
