@@ -1,7 +1,0 @@
----
-# defaults file for nginx
-#
-nginx_port_number: 80
-nginx_site_path: html 
-nginx_server_name: localhost
-
