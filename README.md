@@ -4,7 +4,7 @@ https://epam-training.tk
 
 
 ### user data for your ami
-Please before using change inventory_aws_ec2.yml and group_vars to your own credentials
+Please before using change inventory_aws_ec2.yml and group_vars to your own encrypted credentials
 
 ```
 #!/bin/bash -ex
