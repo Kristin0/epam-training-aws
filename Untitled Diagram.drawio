@@ -1,9 +1,12 @@
-<mxfile host="app.diagrams.net" modified="2021-03-28T20:11:50.560Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="RmqLDDR1I4ELhIvpnuN8" version="14.5.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-03-29T20:14:51.891Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="68bNRGqAH4A5gTpYbjrv" version="14.5.3" type="github">
   <diagram id="Q7_cPsHLoer9BqfHj4Ke" name="Page-1">
-    <mxGraphModel dx="868" dy="1615" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1695" dy="1615" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="iPinuTnvLqNVoqPAZHRv-39" value="AWS Cloud" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud_alt;strokeColor=#232F3E;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#232F3E;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="-180" width="950" height="930" as="geometry" />
+        </mxCell>
         <mxCell id="iPinuTnvLqNVoqPAZHRv-1" value="vpc-epam" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_vpc;verticalAlign=top;align=left;spacingLeft=30;dashed=0;fillColor=none;labelBackgroundColor=none;" vertex="1" parent="1">
           <mxGeometry x="30" y="25" width="810" height="700" as="geometry" />
         </mxCell>
@@ -53,17 +56,19 @@
         <mxCell id="iPinuTnvLqNVoqPAZHRv-12" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.vpc_nat_gateway;fillColor=#F58534;gradientColor=none;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="240" y="110" width="60" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="iPinuTnvLqNVoqPAZHRv-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="iPinuTnvLqNVoqPAZHRv-13" target="iPinuTnvLqNVoqPAZHRv-22">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="190" y="293" />
+              <mxPoint x="180" y="293" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="iPinuTnvLqNVoqPAZHRv-13" value="&lt;font&gt;&lt;font face=&quot;Georgia&quot;&gt;&lt;b&gt;Bastion&amp;nbsp;&lt;br&gt;3.64.177.15&lt;br&gt;&lt;/b&gt;&lt;/font&gt;&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;labelBackgroundColor=none;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="155" y="172" width="70" height="30" as="geometry" />
         </mxCell>
         <mxCell id="iPinuTnvLqNVoqPAZHRv-14" value="&lt;font face=&quot;Georgia&quot;&gt;&lt;b&gt;NAT Gateway&lt;/b&gt;&lt;br&gt;&lt;b&gt;3.65.225.0&lt;/b&gt;&lt;br&gt;&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;labelBackgroundColor=none;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="225" y="172" width="90" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="iPinuTnvLqNVoqPAZHRv-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontColor=#000000;" edge="1" parent="1" source="iPinuTnvLqNVoqPAZHRv-16" target="iPinuTnvLqNVoqPAZHRv-19">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="iPinuTnvLqNVoqPAZHRv-16" value="&lt;font face=&quot;Georgia&quot;&gt;&lt;b&gt;Internet Gateway&lt;/b&gt;&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;labelBackgroundColor=none;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="346.38" y="-30" width="110" height="20" as="geometry" />
         </mxCell>
         <mxCell id="iPinuTnvLqNVoqPAZHRv-17" value="eu-central-b" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;labelBackgroundColor=none;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="760" y="700" width="80" height="20" as="geometry" />
@@ -71,8 +76,11 @@
         <mxCell id="iPinuTnvLqNVoqPAZHRv-18" value="eu-central-a" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;labelBackgroundColor=none;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="30" y="700" width="80" height="20" as="geometry" />
         </mxCell>
+        <mxCell id="iPinuTnvLqNVoqPAZHRv-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="iPinuTnvLqNVoqPAZHRv-42" target="iPinuTnvLqNVoqPAZHRv-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="iPinuTnvLqNVoqPAZHRv-19" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.internet_3;fillColor=#D2D3D3;gradientColor=none;labelBackgroundColor=none;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="361.62" y="-140" width="79.5" height="54" as="geometry" />
+          <mxGeometry x="361.63" y="-300" width="79.5" height="54" as="geometry" />
         </mxCell>
         <mxCell id="iPinuTnvLqNVoqPAZHRv-20" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.rds;fillColor=#2E73B8;gradientColor=none;rounded=1;dashPattern=8 4;strokeColor=#F59D56;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="160" y="520" width="72" height="81" as="geometry" />
@@ -95,8 +103,13 @@
         <mxCell id="iPinuTnvLqNVoqPAZHRv-26" value="10.0.32.0/19" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;dashed=1;dashPattern=8 4;" vertex="1" parent="1">
           <mxGeometry x="490" y="650" width="80" height="20" as="geometry" />
         </mxCell>
+        <mxCell id="iPinuTnvLqNVoqPAZHRv-53" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="iPinuTnvLqNVoqPAZHRv-27">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="196" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="iPinuTnvLqNVoqPAZHRv-27" value="&lt;b&gt;&lt;font face=&quot;Georgia&quot;&gt;WordPress&lt;/font&gt;&lt;/b&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;dashed=1;dashPattern=8 4;" vertex="1" parent="1">
-          <mxGeometry x="165" y="483" width="70" height="20" as="geometry" />
+          <mxGeometry x="161" y="470" width="70" height="20" as="geometry" />
         </mxCell>
         <mxCell id="iPinuTnvLqNVoqPAZHRv-28" value="&lt;b&gt;&lt;font face=&quot;Georgia&quot;&gt;RDS&lt;/font&gt;&lt;/b&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;dashed=1;dashPattern=8 4;" vertex="1" parent="1">
           <mxGeometry x="176" y="600" width="40" height="20" as="geometry" />
@@ -108,9 +121,20 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="iPinuTnvLqNVoqPAZHRv-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#0050ef;strokeColor=#001DBC;" edge="1" parent="1" source="iPinuTnvLqNVoqPAZHRv-31">
+        <mxCell id="iPinuTnvLqNVoqPAZHRv-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#0050ef;strokeColor=#001DBC;" edge="1" parent="1" source="iPinuTnvLqNVoqPAZHRv-16">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="210" y="390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="220" y="325" />
+              <mxPoint x="210" y="325" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iPinuTnvLqNVoqPAZHRv-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.855;entryY=0.855;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="iPinuTnvLqNVoqPAZHRv-31" target="iPinuTnvLqNVoqPAZHRv-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="422" y="240" />
+            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="iPinuTnvLqNVoqPAZHRv-31" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.application_load_balancer;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
@@ -121,6 +145,36 @@
         </mxCell>
         <mxCell id="iPinuTnvLqNVoqPAZHRv-33" value="&lt;b&gt;&lt;font face=&quot;Georgia&quot;&gt;WordPress&lt;/font&gt;&lt;/b&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;dashed=1;dashPattern=8 4;" vertex="1" parent="1">
           <mxGeometry x="553.25" y="479" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="iPinuTnvLqNVoqPAZHRv-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="iPinuTnvLqNVoqPAZHRv-36" target="iPinuTnvLqNVoqPAZHRv-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iPinuTnvLqNVoqPAZHRv-36" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.route_53;fillColor=#F58536;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="366.13" y="-145.5" width="70.5" height="85.5" as="geometry" />
+        </mxCell>
+        <mxCell id="iPinuTnvLqNVoqPAZHRv-42" value="https" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="381.38" y="-210" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="iPinuTnvLqNVoqPAZHRv-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="iPinuTnvLqNVoqPAZHRv-19" target="iPinuTnvLqNVoqPAZHRv-42">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="401.3800000000001" y="-246" as="sourcePoint" />
+            <mxPoint x="401.3800000000001" y="-145.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iPinuTnvLqNVoqPAZHRv-16" value="&lt;font face=&quot;Georgia&quot;&gt;http&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;labelBackgroundColor=none;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="195" y="250" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="iPinuTnvLqNVoqPAZHRv-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#0050ef;strokeColor=#001DBC;" edge="1" parent="1" source="iPinuTnvLqNVoqPAZHRv-31" target="iPinuTnvLqNVoqPAZHRv-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="390" as="targetPoint" />
+            <mxPoint x="280" y="250" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iPinuTnvLqNVoqPAZHRv-54" value="&lt;b&gt;DNS Records:&lt;/b&gt;&lt;br&gt;epam-training.tk&amp;nbsp; &amp;nbsp; &amp;nbsp;A&amp;nbsp; &amp;nbsp; ALB.com&lt;br&gt;&amp;nbsp; &amp;nbsp; epam-training.tk&amp;nbsp; &amp;nbsp; AAAA ALB.com" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="-65" width="210" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="iPinuTnvLqNVoqPAZHRv-55" value="&lt;font face=&quot;Georgia&quot;&gt;&lt;b&gt;Route 53&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="405" y="-65" width="60" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
