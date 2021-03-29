@@ -1,4 +1,4 @@
-![epam-training](https://user-images.githubusercontent.com/44585557/112894510-03c7b280-90ed-11eb-82bf-f59416885886.png)
+![epam-training png](https://user-images.githubusercontent.com/44585557/112894741-48534e00-90ed-11eb-974b-fe9eefda3c64.png)
 
 
 ### user data for your ami
